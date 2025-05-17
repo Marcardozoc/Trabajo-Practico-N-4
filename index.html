@@ -1,0 +1,100 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trabajo Practico N°4  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="contenedor" class="contenedor">
+    <div class="presentacion" >
+
+    </div>
+</div>    
+
+<script>
+    
+    const contenedorHTML = document.getElementById("contenedor")
+
+    let Lenguajes = [
+        {
+            "id": "001",
+            "title": "Java",
+            "thumbnail" : "https://miro.medium.com/v2/resize:fit:2560/1*2XrX0fP0htyTCah7AglTig.jpeg",
+            "descripcion" : "Es un lenguaje de alto nivel fuertemente tipado, se caracteriza por estar orientado a objetos y sus multiples usos",
+            "documentacion" : "https://www.oracle.com/java/technologies/javase-documentation.html"
+
+        },{
+            "id": "002",
+            "title": "Python",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2048px-Python.svg.png",
+            "descripcion" : " Es otro lenguaje de alto nivel, su principal caracteristica es su versatilidad y facilidad a la hora de ser utilizado",
+            "documentacion" : "https://docs.python.org/es/3/"
+        },{
+            "id": "003",
+            "title": "JavaScript",
+            "thumbnail" : "https://1000marcas.net/wp-content/uploads/2020/11/JavaScript-logo.png",
+            "descripcion" : "Es un lenguaje de programacion de alto nivel, se utiliza mas que nada para otorgar interactividad a paginas web, por lo podriamos decir que esta orientado a eventos",
+            "documentacion" : "https://developer.mozilla.org/es/docs/Web/JavaScript"
+        },{
+            "id": "004",
+            "title": "C++",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
+            "descripcion" : "Es un lenguaje que si bien puede resultar algo complicado al inicio, resulta tener un alto rendiimento, su proposito es general",
+            "documentacion" : "https://learn.microsoft.com/es-es/cpp/?view=msvc-170"
+        },{
+            "id": "005",
+            "title": "HTML",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png",
+            "descripcion" : "Si bien no es un lenguaje como tal, es utilizado para crear y estructurar paginas web desde lo simple, se suele acompañar con CSS y Javascript",
+            "documentacion" : "https://developer.mozilla.org/es/docs/Web/HTML"
+        },{
+            "id": "006",
+            "title": "C#",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+            "descripcion" : " C# es un lenguaje orientado a los objetos y la seguridad de tipos, es multusos y versatil para desarrollo de aplicaciones ",
+            "documentacion" : "https://learn.microsoft.com/es-es/dotnet/csharp/"
+        }
+        ,{
+            "id": "006",
+            "title": "GO",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/512px-Go_Logo_Blue.svg.png",
+            "descripcion" : " Es un lenguaje de codigo abierto cuyo proposito es general, su tipado es estatico y es conocido por ser simple y eficiente. Se usa para desarrollo web, servicios de nube y red",
+            "documentacion" : "https://go.dev/doc/"
+        }
+        ,{
+            "id": "007",
+            "title": "Kotlin",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png",
+            "descripcion" : "Es un lenguaje de programacion moderno de codigo abierto y multiplataforma, busca la comodidad del desarrollador, puede interpolarse con java",
+            "documentacion" : "https://kotlinlang.org/docs/home.html"
+        }
+        ,{
+            "id": "008",
+            "title": "Rust",
+            "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/2048px-Rust_programming_language_black_logo.svg.png",
+            "descripcion" : " Es un lenguaje estatico de alto rendimiento cuyo principal enfoque es la segudiradad y la eficiencia, se detaca en el desarrollo de sistemas y software de bajo nivel, pero tambien se usa para web",
+            "documentacion" : "https://www.rust-lang.org/learn"
+        },{
+            "id": "009",
+            "title": "Swift",
+            "thumbnail" : "https://developer.apple.com/swift/images/swift-og.png",
+            "descripcion" : "Es un lenguaje desarrollado por apple, para crear aplicaciones para plataformas de la compañia",
+            "documentacion" : "https://www.swift.org/documentation/ "
+        }
+    ]
+        const htmlLenguajes = Lenguajes.map((lenguaje)=>{
+            return `
+            <div class = "presentacion">
+                <h3 class="titulos"> ${lenguaje.title} </h3>
+                <img src= "${ lenguaje.thumbnail}" width="200" margin:auto> </img>
+                <p> Descripcion : ${lenguaje.descripcion}</p>
+                <p> Documentacion : ${lenguaje.documentacion}</p>
+            </div> `
+        }
+    )
+    contenedorHTML.innerHTML = htmlLenguajes.join("");
+
+</script>
+
+</body>
